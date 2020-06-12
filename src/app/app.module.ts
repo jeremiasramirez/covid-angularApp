@@ -13,6 +13,8 @@ import { ExploreComponent } from './explore/explore.component';
 import { MatButtonModule } from "@angular/material/button"
 import { MatCardModule} from '@angular/material/card';
 import { MatRippleModule} from '@angular/material/core';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { MatRippleModule} from '@angular/material/core';
     ROUTING,
     MatButtonModule,
     MatCardModule,
-    MatRippleModule
+    MatRippleModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule
 
   ],
   providers: [],

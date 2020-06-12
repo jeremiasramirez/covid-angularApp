@@ -7,14 +7,14 @@ import { pluck, delay } from 'rxjs/operators'
 
 export class Summary {
  
-    private dataSummary(){
+    private globalCase(){
         return ajax.get('https://api.covid19api.com/summary').pipe(
             delay(500),
             pluck('response','Global')
           )
     } 
     public get(){
-        return this.dataSummary()
+        return this.globalCase()
     }
 
 
