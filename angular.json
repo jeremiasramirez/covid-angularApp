@@ -24,7 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.css",
+              "node_modules/jeremias-button/css/jeremias-button.css",
+              "node_modules/jeremias-menu/css/jeremias-menu.css",
+              "node_modules/jeremias-alert/css/jeremias-alert.css",
+              "node_modules/jeremias-theme/css/jeremias-theme.css"
             ],
             "scripts": []
           },
@@ -88,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +125,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "covidApp"
 }
