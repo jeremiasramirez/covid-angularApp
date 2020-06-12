@@ -1,15 +1,28 @@
 
 
-<div class="containerControl">
-    <div class="iconCovid" *ngIf="icon.rotate">
+<div class="containerControl ">
+    
+    <div class="iconCovid in" *ngIf="icon.rotate">
         <img src="../../assets/images/iconCovid.png" alt="">
     </div>
 
-    <section *ngIf="!icon.rotate"  >
+    <section *ngIf="!icon.rotate" class="in" style="margin-top: -4em;">
         <h1 class="center">Covid control</h1>
+      </section>
+
+    <section *ngIf="!icon.rotate" class="in"  style="margin:1em">
+   
         <img src="../../assets/images/covid.png" class="sizeImgControl" alt="Covid">
-       
     </section>
 
-    <button mat-button  color="primary" class="min">Watch</button>
+
+      <section *ngIf="!icon.rotate"   class="inBottom">
+        <button 
+        (click)="redirectToHome('home')"
+        mat-button
+        style="width: 200px;margin-bottom: -1em;"
+        class="btn--blue-dark">Watch</button>
+      </section>
+
+   
 </div>
