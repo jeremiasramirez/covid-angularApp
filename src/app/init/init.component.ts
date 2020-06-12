@@ -14,6 +14,7 @@ export class InitComponent implements OnInit {
   public icon = {
     rotate:true
   }
+  public time = new Date()
   constructor(public feature:Feature){
 
   }
@@ -22,6 +23,6 @@ export class InitComponent implements OnInit {
     timer(2000).subscribe(()=>this.icon.rotate=false)
   }
   public redirectToHome(data:string){
-    this.feature.setRouting(data,300);
+    this.feature.setRouting(data,500);
   }
 }

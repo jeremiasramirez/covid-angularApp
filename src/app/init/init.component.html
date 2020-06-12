@@ -6,8 +6,8 @@
         <img src="../../assets/images/iconCovid.png" alt="">
     </div>
 
-    <section *ngIf="!icon.rotate" class="in" style="margin-top: -4em;">
-        <h1 class="center">Covid control</h1>
+    <section *ngIf="!icon.rotate" class="in titleFloat"  >
+        <h1 class="center">Covid control <i class="fas fa-shield-alt text--red"></i></h1>
       </section>
 
     <section *ngIf="!icon.rotate" class="in"  style="margin:1em">
@@ -21,8 +21,12 @@
         (click)="redirectToHome('home')"
         mat-button
         style="width: 200px;margin-bottom: -1em;"
-        class="btn--blue-dark">Watch</button>
+        class="btn--blue-dark">Watch  <i class="fas long-arrow-alt-right"></i></button>
       </section>
-
+<!---
+      <div *ngIf="!icon.rotate"   class="timingFloat inTop">
+          <span> <i class="fas fa-clock"></i> {{time |date}}</span>
+      </div>
+-->
    
 </div>
