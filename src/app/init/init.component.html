@@ -1,0 +1,15 @@
+
+
+<div class="containerControl">
+    <div class="iconCovid" *ngIf="icon.rotate">
+        <img src="../../assets/images/iconCovid.png" alt="">
+    </div>
+
+    <section *ngIf="!icon.rotate"  >
+        <h1 class="center">Covid control</h1>
+        <img src="../../assets/images/covid.png" class="sizeImgControl" alt="Covid">
+       
+    </section>
+
+    <button mat-button  color="primary" class="min">Watch</button>
+</div>

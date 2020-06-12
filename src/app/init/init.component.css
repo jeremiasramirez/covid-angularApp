@@ -1,0 +1,32 @@
+
+
+.containerControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: azure;
+}
+.sizeImgControl{
+    width: 250px;
+}
+.iconCovid img{
+    width: 100px;
+    animation:rotating 2s linear
+}
+@keyframes rotating{
+    from{
+        transform:  rotate(200deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+.center{
+    text-align: center;
+}
