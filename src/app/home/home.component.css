@@ -2,3 +2,27 @@
     transform: scale(.4);
 }
  
+.container__global{
+    max-width: 700px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+
+}
+
+
+.container__global__title{
+  
+
+}
+
+
+.container__global__content{
+
+
+}
