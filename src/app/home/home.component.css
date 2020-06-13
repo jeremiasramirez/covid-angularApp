@@ -1,10 +1,15 @@
 .inOuts{
     transform: scale(.4);
 }
- 
+.responsive__global{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 .container__global{
     max-width: 800px;
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -14,9 +19,16 @@
 
 }
 
+.containerExplore{
+    margin-top: 1em;
+}
+
+.containerExplore button{
+    width: 130px;
+}
 
 .container__global__title{
-  
+text-align: center;
 
 }
 
@@ -28,14 +40,17 @@
     flex-wrap: wrap;
 
 }
-
+.separateIcon{
+    padding-right:5px 
+}
+ 
 .container__globa__subcontent{
     display: flex;
-    margin: .3em;
-   
+    margin: .3em .8em;
+    padding: .8em;
     width: 300px;
     justify-content: space-between;
-    border: 1px solid blue;
+    border-bottom: 1px solid #eee;
     align-items: center;
     
 }

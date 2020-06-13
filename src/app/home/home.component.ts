@@ -14,7 +14,14 @@ import { Feature  } from '../services/feature.service'
 
 export class HomeComponent implements OnInit {
 
-  public globalData : SummaryData;
+  public globalData : SummaryData={
+    NewConfirmed: 0,
+    NewDeaths: 0,
+    NewRecovered: 0,
+    TotalConfirmed: 0,
+    TotalDeaths: 0,
+    TotalRecovered: 0
+  };
 
   public spinnerChange :spinner ={
     off:true
@@ -26,7 +33,7 @@ export class HomeComponent implements OnInit {
       this.globalData=data
       console.log(this.globalData);
       
-    })
+    }, (err)=>{return err}, ()=>{this.spinnerChange.off=false})
     
   }
 
