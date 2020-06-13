@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
   constructor(public summary:Summary) { 
     this.summary.get().subscribe((data:SummaryData)=>{
       this.globalData=data;
+      console.log(data)
     }, (err)=>{return err}, ()=>{this.spinnerChange.off=false})
     
   }

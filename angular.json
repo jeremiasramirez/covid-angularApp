@@ -31,7 +31,7 @@
               "node_modules/jeremias-alert/css/jeremias-alert.css",
               "node_modules/jeremias-theme/css/jeremias-theme.css",
               "node_modules/jeremias-animation/css/jeremias-animation.css",
-              "src/assets/fontawesome/css/all.min.css"
+              "src/assets/fontawesome/css/all.css"
             ],
             "scripts": []
           },
