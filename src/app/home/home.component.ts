@@ -15,24 +15,22 @@ import { Feature  } from '../services/feature.service'
 export class HomeComponent implements OnInit {
 
   public globalData : SummaryData={
-    NewConfirmed: 0,
-    NewDeaths: 0,
-    NewRecovered: 0,
-    TotalConfirmed: 0,
-    TotalDeaths: 0,
-    TotalRecovered: 0
+    NewConfirmed: null,
+    NewDeaths: null,
+    NewRecovered: null,
+    TotalConfirmed: null,
+    TotalDeaths: null,
+    TotalRecovered: null
   };
 
-  public spinnerChange :spinner ={
+  public spinnerChange : spinner ={
     off:true
   } 
 
 
   constructor(public summary:Summary) { 
     this.summary.get().subscribe((data:SummaryData)=>{
-      this.globalData=data
-      console.log(this.globalData);
-      
+      this.globalData=data;
     }, (err)=>{return err}, ()=>{this.spinnerChange.off=false})
     
   }

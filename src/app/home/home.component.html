@@ -1,36 +1,37 @@
 <div class="responsive__global in">
 
+    <article class="container__global__title">
+        <h1>Global status</h1>
+    </article>
     <section class="container__global ">
 
-        <article class="container__global__title">
-            <h1>Global status</h1>
-        </article>
+      
     
         <article class="container__global__content">
              
           <div class="container__globa__subcontent">
                 <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevos confirmados</p>
-                <p>{{globalData.NewConfirmed}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i> {{globalData.NewConfirmed}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-skull-crossbones"></i> Nuevas muertes</p>
-                <p>{{globalData.NewDeaths}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewDeaths"></i> {{globalData.NewDeaths}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-users-cog"></i> Recuperados</p>
-                <p>{{globalData.NewRecovered}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewRecovered"></i> {{globalData.NewRecovered}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-list-ul "></i> Total confirmados</p>
-                <p>{{globalData.TotalConfirmed}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalConfirmed"></i> {{globalData.TotalConfirmed}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-user-slash"></i> Muertes totales</p>
-                <p>{{globalData.TotalDeaths}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalDeaths"></i> {{globalData.TotalDeaths}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-check"></i> Total de recuperados</p>
-                <p>{{globalData.TotalRecovered}}</p>
+                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalRecovered"></i> {{globalData.TotalRecovered}}</p>
             </div>
           
         </article>
@@ -40,14 +41,10 @@
     </section>
 
         
-    <!--
-    **Spinner**
--->
-    <div class="inOuts" *ngIf="spinnerChange.off">
-        <mat-spinner ></mat-spinner>
-    </div>
+    <br>
+    <br>
 
-    <div class="containerExplore">
+    <div class="containerExplore inBottom"  *ngIf="!spinnerChange.off">
         <button mat-button class="btn--blue-dark">Explorar</button>
     </div>
 
