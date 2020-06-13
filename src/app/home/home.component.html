@@ -3,6 +3,14 @@
     <article class="container__global__title">
         <h1>Global status</h1>
     </article>
+
+        <div *ngIf="!statusConnection.off && spinnerChange.off" class="alert--error in">
+        Conexión de red inestable <button mat-button (click)="intermediaryData()">Reintentar</button>
+    </div>
+
+        <div class="in" style="color:red" *ngIf="!statusConnection.message && spinnerChange.off">
+        Conectando <i class="fas fa-circle-notch" ></i> 
+    </div>
     <section class="container__global ">
 
       
@@ -44,9 +52,11 @@
     <br>
     <br>
 
-    <div class="containerExplore inBottom"  *ngIf="!spinnerChange.off">
+
+    <div class="containerExplore in"  *ngIf="!spinnerChange.off">
         <button mat-button class="btn--blue-dark">Explorar</button>
     </div>
+
 
 </div>
 
