@@ -12,49 +12,70 @@ import { Feature } from "./services/feature.service";
   ]
 })
 export class AppComponent {
-
+  public showTheme={
+    show:true
+  }
   public themeName ={
     menu: "menu--blue-dark",
     theme: "theme--blue-dark"
   }
-
+  public bodys=document.getElementById("body");
+  public classNew = "themeActived"
    
-  public switchs:boolean=false;
+ 
   constructor(public summary:Summary,public feature:Feature){
-    
+    this.validateTheme()
   }
 
+
+  public validateTheme(){
+ 
+    if (localStorage.getItem("theme")){
+      this.themeName.menu="menu--black"
+      this.themeName.theme= "theme--black"
+      this.bodys.classList.add(this.classNew)
+    }
+    else{
+     
+      this.themeName.menu="menu--blue-dark"
+      this.themeName.theme= "theme--blue-dark"
+      this.bodys.classList.remove(this.classNew)
+    }
+
+  }
   public activeTheme(){
     
-      this.statusTheme()
-
+      
+    if(this.showTheme.show){
+      this.showTheme.show=false
+    }
+    else{
+      this.showTheme.show=true
+    }
     
     
 
   }
   public clearTheme(){
     localStorage.removeItem("theme")
+    this.validateTheme()
+    this.showTheme.show=true
   }
-  public statusTheme(){
-    let bodys=document.getElementById("body");
-    let classNew = "themeActived"
+   
+ 
+  public darkTheme(){
+ 
 
-    
-    if (localStorage.getItem("theme")){
+
+    if (!localStorage.getItem("theme")){
+      localStorage.setItem("theme", "actived")
       this.themeName.menu="menu--black"
       this.themeName.theme= "theme--black"
-      bodys.classList.add(classNew)
-      localStorage.setItem("theme", "actived")
+      this.bodys.classList.add(this.classNew)
+      this.validateTheme()
+      this.showTheme.show=true
+     
 
-
-    }
-    else{
-      
-   
-      this.clearTheme()
-      bodys.classList.remove(classNew)
-      this.themeName.menu="menu--blue-dark"
-      this.themeName.theme= "theme--blue-dark"
 
     }
 

@@ -17,27 +17,27 @@
     
         <article class="container__global__content">
              
-          <div class="container__globa__subcontent">
+          <div class="container__globa__subcontent inTop">
                 <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevos confirmados</p>
                 <p ><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i>  {{globalData.NewConfirmed}}</p>
             </div>
-            <div class="container__globa__subcontent">
+            <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-skull-crossbones"></i> Nuevas muertes</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewDeaths"></i> {{globalData.NewDeaths}}</p>
             </div>
-            <div class="container__globa__subcontent">
+            <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-users-cog"></i> Recuperados</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewRecovered"></i> {{globalData.NewRecovered}}</p>
             </div>
-            <div class="container__globa__subcontent">
+            <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-list-ul "></i> Total confirmados</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalConfirmed"></i> {{globalData.TotalConfirmed}}</p>
             </div>
-            <div class="container__globa__subcontent">
+            <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-user-slash"></i> Muertes totales</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalDeaths"></i> {{globalData.TotalDeaths}}</p>
             </div>
-            <div class="container__globa__subcontent">
+            <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-check"></i> Total de recuperados</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalRecovered"></i> {{globalData.TotalRecovered}}</p>
             </div>
