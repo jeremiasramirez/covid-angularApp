@@ -5,7 +5,10 @@ import { Router } from '@angular/router';
 
 export class Feature {
  
-    constructor(public router:Router){}
+    constructor(public router:Router){
+      
+        
+    }
 
 
     public setRouting(data:string='', timing:number=100){
@@ -15,5 +18,6 @@ export class Feature {
         },timing)
     
     }
+    
 
 }

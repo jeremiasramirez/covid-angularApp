@@ -19,7 +19,7 @@
              
           <div class="container__globa__subcontent">
                 <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevos confirmados</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i> {{globalData.NewConfirmed}}</p>
+                <p ><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i>  {{globalData.NewConfirmed}}</p>
             </div>
             <div class="container__globa__subcontent">
                 <p><i class="separateIcon fas fa-skull-crossbones"></i> Nuevas muertes</p>
@@ -56,6 +56,7 @@
     <div class="containerExplore in"  *ngIf="!spinnerChange.off">
         <button mat-button class="btn--blue-dark">Explorar</button>
     </div>
+    <br>
 
 
 </div>

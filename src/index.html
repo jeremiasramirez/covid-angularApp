@@ -9,7 +9,17 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="mat-typography">
+<body class="mat-typography" id="body">
+  
   <app-root></app-root>
+ 
+  <style>
+   
+    
+  </style>
+
+  <script>
+    document.getElementById("body").classList.add(localStorage.getItem("theme"))
+  </script>
 </body>
 </html>
