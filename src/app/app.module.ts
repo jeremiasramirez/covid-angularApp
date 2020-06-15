@@ -15,6 +15,7 @@ import { MatCardModule} from '@angular/material/card';
 import { MatRippleModule} from '@angular/material/core';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CreditComponent } from './credit/credit.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     SearchComponent,
     HomeComponent,
     ExploreComponent,
-    InitComponent
+    InitComponent,
+    CreditComponent
 
   ],
   imports: [
