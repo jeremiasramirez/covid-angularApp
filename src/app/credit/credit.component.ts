@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input} from '@angular/core';
 
 @Component({
   selector: 'app-credit',
   templateUrl: './credit.component.html',
   styleUrls: ['./credit.component.css']
 })
-export class CreditComponent implements OnInit {
+export class CreditComponent  {
 
-  constructor() { }
+  @Input('receivedData') dataCase;
 
-  ngOnInit(): void {
-  }
+  constructor() {
+
+   }
+   ngOnInit(){
+     console.log(this.dataCase)
+   }
+
 
 }
