@@ -17,7 +17,7 @@ import {  timer } from "rxjs"
 })
 export class ExploreComponent   {
 
-  public allCases :  typeAllCases[] = [];
+  public allCases  :typeAllCases[]=[];
 
   public index : number =0;
   public limit : number =10;
@@ -39,12 +39,12 @@ export class ExploreComponent   {
   public getAllCases(){
 
     this.summary.getAll().
-     subscribe((data:typeAllCases)=>{
-      this.allCases = data;
+     subscribe((data)=>{
+      this.allCases=(data);
     },
      (err)=>{return err},
      ()=>{
-       
+
        this.spinner.off=false;
        this.calcDivider= Math.ceil(this.allCases.length/this.lenCard)
 
