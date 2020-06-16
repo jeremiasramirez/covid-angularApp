@@ -6,15 +6,33 @@ import { pluck, delay } from 'rxjs/operators'
 @Injectable()
 
 export class Summary {
- 
+    public linkAPiCovid : string = 'https://api.covid19api.com/summary';
+
+
+    constructor(){
+        this.getAll().subscribe((data)=>console.log(data)
+        )
+    }
     private globalCase(){
-        return ajax.get('https://api.covid19api.com/summary').pipe(
+        return ajax.get(this.linkAPiCovid).pipe(
             delay(500),
             pluck('response','Global')
           )
-    } 
+    }
+
+    private allCase(){
+        return ajax.get(this.linkAPiCovid).pipe(
+            delay(700),
+            pluck('response','Countries')
+          )
+    }
+
     public get(){
         return this.globalCase()
+    }
+
+    public getAll(){
+        return this.allCase()
     }
 
 

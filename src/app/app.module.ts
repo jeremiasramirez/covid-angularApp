@@ -17,7 +17,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { CreditComponent } from './credit/credit.component';
 import { MatInputModule } from '@angular/material/input';
-
+ 
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { MatInputModule } from '@angular/material/input';
     MatTooltipModule,
     MatInputModule
 
-  ],
+  ], 
   providers: [],
   bootstrap: [AppComponent]
 })

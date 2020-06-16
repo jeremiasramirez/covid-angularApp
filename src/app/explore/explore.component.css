@@ -1,0 +1,19 @@
+.example-card {
+    width: 280px;
+    margin:.3em .1em;
+  }
+.spinner{
+  transform: scale(.4);
+}
+ .containerExplore{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+.btn__watch{
+  width: 100%;
+}
+.containerExplore mat-card {
+  margin: .5em;
+}

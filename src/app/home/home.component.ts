@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Summary  } from '../services/summary.service'
 import { Feature  } from '../services/feature.service'
+import {  globalCases } from '../services/typeCases.service'
 import { timer } from 'rxjs';
 
 @Component({
@@ -22,7 +23,7 @@ export class HomeComponent {
 
   
 
-  public globalData : SummaryData={
+  public globalData : globalCases={
     NewConfirmed: null,
     NewDeaths: null,
     NewRecovered: null,
@@ -43,7 +44,7 @@ export class HomeComponent {
 
   }
   public getDataOfGlobal(){
-    this.summary.get().subscribe((data:SummaryData)=>{
+    this.summary.get().subscribe((data:globalCases)=>{
       this.globalData=data;
     }, (err)=>{return err}, ()=>{this.spinnerChange.off=false})
 
@@ -74,11 +75,4 @@ interface spinner {
   off:boolean;
 }
 
-interface SummaryData {
-  NewConfirmed: number;
-  NewDeaths: number;
-  NewRecovered: number;
-  TotalConfirmed: number;
-  TotalDeaths: number;
-  TotalRecovered: number
-}
+ 
