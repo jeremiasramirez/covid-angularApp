@@ -1,4 +1,14 @@
-<div class="responsive__global in">
+
+<div class="containerExplore" *ngIf="spinner.off" >
+
+  <div class="spinner" >
+        <mat-spinner ></mat-spinner>
+  </div>
+
+
+
+</div>
+<div class="responsive__global in" *ngIf="!spinner.off">
 
     <article class="container__global__title">
         <h1>Global status</h1>
@@ -9,14 +19,14 @@
     </div>
 
         <div class="in" style="color:red" *ngIf="!statusConnection.message && spinnerChange.off">
-        Conectando <i class="fas fa-circle-notch" ></i> 
+        Conectando <i class="fas fa-circle-notch" ></i>
     </div>
     <section class="container__global ">
 
-      
-    
+
+
         <article class="container__global__content">
-             
+
           <div class="container__globa__subcontent inTop">
                 <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevos confirmados</p>
                 <p ><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i>  {{globalData.NewConfirmed | number}}</p>
@@ -41,24 +51,22 @@
                 <p><i class="separateIcon fas fa-check"></i> Total de recuperados</p>
                 <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalRecovered"></i> {{globalData.TotalRecovered| number}}</p>
             </div>
-          
+
         </article>
-    
+
 
 
     </section>
 
-        
+
     <br>
     <br>
 
 
     <div class="containerExplore in"  *ngIf="!spinnerChange.off">
-        <button mat-button class="btn--blue-dark">Explorar</button>
+        <button mat-button class="btn--blue-dark" (click)="referenceRouting()">Explorar</button>
     </div>
     <br>
 
 
 </div>
-
-   

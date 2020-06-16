@@ -9,22 +9,20 @@ export class Summary {
     public linkAPiCovid : string = 'https://api.covid19api.com/summary';
 
 
-    constructor(){
-        this.getAll().subscribe((data)=>console.log(data)
-        )
-    }
     private globalCase(){
+
         return ajax.get(this.linkAPiCovid).pipe(
             delay(500),
-            pluck('response','Global')
-          )
+            pluck('response','Global'))
+
     }
 
     private allCase(){
+
         return ajax.get(this.linkAPiCovid).pipe(
             delay(700),
-            pluck('response','Countries')
-          )
+            pluck('response','Countries'))
+
     }
 
     public get(){
