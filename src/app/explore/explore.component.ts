@@ -18,7 +18,18 @@ import {  timer } from "rxjs"
 export class ExploreComponent   {
 
   public allCases  :typeAllCases[]=[];
-
+  public exceptionFloatData :typeAllCases[] =[{
+    Country: "Dominican rep.",
+    CountryCode: "DO",
+    Date: "hoy",
+    NewConfirmed: 1,
+    NewDeaths: 2,
+    NewRecovered: 3,
+    Slug: "ok",
+    TotalConfirmed: 12,
+    TotalDeaths: 13,
+    TotalRecovered: 14
+  }]
   public index : number =0;
   public limit : number =10;
   public lenCard:number=10;

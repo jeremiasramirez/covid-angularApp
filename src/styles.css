@@ -6,3 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #eee;
     background-color: #111;
   }
+.themeDisabled{
+    color: #eee;
+    background-color: rgba(33, 52, 139, 0.984);
+  }
