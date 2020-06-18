@@ -1,0 +1,58 @@
+
+<div class="container__float" *ngIf="this.classFloat.hide">
+
+    <div class="container__data__float  up" [ngClass]="{'themeActived':classFloat.black ==true,'themeDisabled':classFloat.black ==false}">
+  
+  
+      <div class="container__data__title  ">
+            <h1>{{dataCase.Country}}</h1>
+            <p>{{dataCase.Date | date}}</p>
+      </div>
+  
+  
+  
+      <article class="container__global__content">
+  
+  
+          <div class="container__globa__subcontent inBottoms  ">
+                <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Código </p>
+                <p >  {{dataCase.CountryCode}} </p>
+          </div>
+          <div class="container__globa__subcontent inBottoms  ">
+                <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevo confirmados</p>
+                <p >   {{dataCase.NewConfirmed | number}} </p>
+          </div>
+          <div class="container__globa__subcontent inBottoms ">
+              <p><i class="separateIcon fas fa-skull-crossbones"></i> Nuevas muertes</p>
+              <p> {{dataCase.NewDeaths | number}}</p>
+          </div>
+          <div class="container__globa__subcontent inBottoms ">
+              <p><i class="separateIcon fas fa-users-cog"></i> Nuevos recuperados</p>
+              <p> {{dataCase.NewRecovered | number}}</p>
+          </div>
+          <div class="container__globa__subcontent inBottoms ">
+              <p><i class="separateIcon fas fa-list-ul "></i> Total confirmados</p>
+              <p> {{dataCase.TotalConfirmed | number}}</p>
+          </div>
+          <div class="container__globa__subcontent inBottoms ">
+              <p><i class="separateIcon fas fa-user-slash"></i> Muertes totales</p>
+              <p> {{dataCase.TotalDeaths | number}}</p>
+          </div>
+          <div class="container__globa__subcontent inBottoms">
+              <p><i class="separateIcon fas fa-check"></i> Total de recuperados</p>
+              <p> {{dataCase.TotalRecovered | number}}</p>
+          </div>
+  
+      </article>
+  
+  
+  
+      <div class="container__data__close">
+        <button type="button" (click)="hide()" mat-button name="button"><i class="fas fa-undo-alt"></i> Atras </button>
+      </div>
+    </div>
+  
+  
+  
+  </div>
+  
