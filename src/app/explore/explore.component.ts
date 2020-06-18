@@ -42,11 +42,24 @@ export class ExploreComponent   {
     loadPag:false,
     hide:true
   }
-
+  public showFloat : boolean=false
 
   constructor(public summary:Summary, public feature:Feature) {
     this.getAllCases()
   }
+
+
+  public sendToFloat(data){
+      this.exceptionFloatData = data;
+
+    if (this.showFloat==false) {this.showFloat=true}
+    else {this.showFloat=false}
+
+
+
+
+  }
+
   public getAllCases(){
 
     this.summary.getAll().
