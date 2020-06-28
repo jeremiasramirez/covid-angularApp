@@ -45,6 +45,7 @@ export class ExploreComponent   {
   public showFloat : boolean=false
 
   constructor(public summary:Summary, public feature:Feature) {
+    this.feature.change('titleTheme',"Explore")
     this.getAllCases()
   }
 

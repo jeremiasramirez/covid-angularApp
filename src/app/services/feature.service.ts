@@ -16,6 +16,9 @@ export class Feature {
         },timing)
 
     }
+    public change(id:string="titleTheme",name:string='Covid control'){
+        document.getElementById(id).innerHTML = name;
+    }
 
 
 }
