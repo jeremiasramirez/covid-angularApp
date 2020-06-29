@@ -38,8 +38,8 @@ export class FloatDataComponent  {
   public hide( ){
      
     this.alldata.nativeElement.style.opacity="0"
-    timer(500).subscribe(()=>{
-      this.classFloat.hide=true
+    timer(300).subscribe(()=>{
+      this.classFloat.hide=false
      
       
     })

@@ -7,7 +7,7 @@
     height: 100vh;
     z-index: 100;
     position: fixed;
-    transition: .5s;
+    transition: 1s;
     top: 0;
     background-color: rgba(0%, 0%, 0%, 90%);
 

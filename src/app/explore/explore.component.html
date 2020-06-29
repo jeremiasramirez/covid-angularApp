@@ -18,8 +18,8 @@
           <mat-card-title>{{allcases.Country}}</mat-card-title>
           <mat-card-subtitle>{{allcases.CountryCode}}</mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content matRipple matRippleRadius="40" matRippleUnbounded="false">
-           <p  class="btn__watch" (click)="sendToFloat(allCases[index])">Watch <i class="fas fa-eye"></i></p>
+        <mat-card-content >
+           <button  class="btn__watch" mat-button (click)="sendToFloat(allCases[index])">Watch <i class="fas fa-eye"></i></button>
         </mat-card-content>
 
       </mat-card>

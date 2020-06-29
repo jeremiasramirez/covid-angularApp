@@ -22,8 +22,8 @@
         <mat-card-title>{{data.Country | uppercase}}</mat-card-title>
         <mat-card-subtitle>{{data.CountryCode}}</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content matRipple matRippleRadius="40" matRippleUnbounded="false">
-         <p  class="btn__watch" (click)="read(data)">Watch <i class="fas fa-eye"></i></p>
+      <mat-card-content  >
+         <button mat-button class="btn--watch" style="width: 99%" (click)="read(data)">Watch <i class="fas fa-eye"></i></button>
       </mat-card-content>
 
     </mat-card>
