@@ -17,6 +17,7 @@ export class Summary {
 
     }
 
+
     private allCase(){
 
         return ajax.get(this.linkAPiCovid).pipe(
