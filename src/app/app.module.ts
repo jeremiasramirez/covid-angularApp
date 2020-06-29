@@ -18,7 +18,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { CreditComponent } from './credit/credit.component';
 import { MatInputModule } from '@angular/material/input';
 import { FloatDataComponent } from './float-data/float-data.component';
- 
+import { MatBadgeModule} from "@angular/material/badge"
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { FloatDataComponent } from './float-data/float-data.component';
     MatRippleModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatInputModule
+    MatInputModule,
+    MatBadgeModule
 
   ], 
   providers: [],

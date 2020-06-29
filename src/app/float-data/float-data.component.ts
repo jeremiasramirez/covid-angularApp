@@ -1,4 +1,5 @@
-import { Component,Input} from '@angular/core';
+import { Component,Input, ViewChild} from '@angular/core';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-float-data',
@@ -8,19 +9,23 @@ import { Component,Input} from '@angular/core';
 export class FloatDataComponent  {
 
   @Input('receivedData') dataCase;
+  @ViewChild("allData") alldata;
   public classFloat = {
     black:null,
     hide: true
   }
-  constructor() {
-    if(localStorage.getItem("theme")){ this.classFloat.black =true}
-    else {this.classFloat.black = false}
-   }
+ 
 
   ngOnInit(): void {
+      if(localStorage.getItem("theme")){ this.classFloat.black =true}
+      else {this.classFloat.black = false}
   }
-  public hide(){
-    this.classFloat.hide=false
-
-}
+  public hide( ){
+      
+    this.alldata.nativeElement.style.opacity="0"
+    timer(500).subscribe(()=>this.classFloat.hide=false)
+    
+    
+  }
+ 
 }
