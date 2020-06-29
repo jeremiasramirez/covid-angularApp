@@ -30,13 +30,13 @@ export class ExploreComponent   {
     TotalDeaths: 13,
     TotalRecovered: 14
   }]
+
   public index : number =0;
   public limit : number =10;
   public lenCard:number=10;
   public calcDivider:number=0;
-
   public scrolling = window;
-
+  public showOrHide:number=0;
   public spinner = {
     off:true,
     loadPag:false,
@@ -45,19 +45,18 @@ export class ExploreComponent   {
   public showFloat : boolean=false
 
   constructor(public summary:Summary, public feature:Feature) {
+   
     this.feature.change("Explore")
     this.getAllCases()
+
   }
 
 
   public sendToFloat(data){
-      this.exceptionFloatData = data;
+    this.exceptionFloatData = data;
 
-    if (this.showFloat==false) {this.showFloat=true}
-    else {this.showFloat=false}
-
-
-
+    this.showFloat==false?this.showFloat=true:this.showFloat=false
+    
 
   }
 

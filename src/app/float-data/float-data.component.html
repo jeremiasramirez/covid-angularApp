@@ -1,5 +1,5 @@
 
-<div class="container__float" *ngIf="this.classFloat.hide" #allData>
+<div class="container__float" *ngIf="this.classFloat.hide==true" #allData>
 
   
     <div class="container__data__float  up" [ngClass]="{'themeActived':classFloat.black ==true,'themeDisabled':classFloat.black ==false}">
@@ -7,7 +7,7 @@
   
       <div class="container__data__title  ">
             <h1>{{dataCase.Country}}</h1>
-            <p><span (click)="hide()" matRipple class="fas fa-arrow-down"></span> </p>
+            <p><span (click)="show()" matRipple class="fas fa-arrow-down"></span> </p>
       </div>
   
  
