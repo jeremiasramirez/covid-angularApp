@@ -14,10 +14,11 @@ import { timer } from 'rxjs';
   ]
 })
 export class SearchComponent   {
- 
+  public showComponentFloat:boolean = false;
+  
   public searched : typeAllCases[] = []
   public searchedFinded :any= []
-
+  public dataFromSearch
   public spinner = {
     off:true
   }
@@ -69,6 +70,15 @@ export class SearchComponent   {
      
   }
 
+
+  public read(resp:any){
+
+    this.dataFromSearch = resp;
+    
+    if (this.showComponentFloat==false) this.showComponentFloat=true
+    else this.showComponentFloat=false
+
+  }
   
 
 }
