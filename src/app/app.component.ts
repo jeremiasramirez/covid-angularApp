@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit} from '@angular/core';
 import { Summary } from "./services/summary.service";
 import { Feature } from "./services/feature.service";
 
@@ -11,7 +11,7 @@ import { Feature } from "./services/feature.service";
     Feature
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public showTheme={
     show:true
   }
@@ -24,8 +24,13 @@ export class AppComponent {
    
  
   constructor(public summary:Summary,public feature:Feature){
+    
     this.validateTheme()
   }
+  ngOnInit(){
+    this.feature.change("Covid control")
+  }
+
 
 
   public validateTheme(){

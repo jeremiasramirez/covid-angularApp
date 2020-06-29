@@ -14,7 +14,7 @@ import { timer } from 'rxjs';
   ]
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   public statusConnection ={
     off:true,
@@ -25,7 +25,9 @@ export class HomeComponent {
     public spinner :spinner= {
       off:true
     }
-
+    ngOnInit(){
+      this.feature.change("Covid control")
+    }
   public globalData : globalCases={
     NewConfirmed: null,
     NewDeaths: null,

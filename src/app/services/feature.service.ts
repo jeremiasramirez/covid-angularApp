@@ -16,8 +16,10 @@ export class Feature {
         },timing)
 
     }
-    public change(id:string="titleTheme",name:string='Covid control'){
-        document.getElementById(id).innerHTML = name;
+    public change(name:string='Covid control'){
+        let titles={mainTitle:"mainTitle", themeTitle:"titleTheme"}
+        let doc=document.getElementById(titles.mainTitle).innerHTML = name;
+        let doc2 =document.getElementById(titles.themeTitle).innerHTML = name;
     }
 
 
