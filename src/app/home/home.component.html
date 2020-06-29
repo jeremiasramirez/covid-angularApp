@@ -29,27 +29,27 @@
 
           <div class="container__globa__subcontent inTop">
                 <p ><i class="separateIcon fas fa-user-plus separateIcon"  ></i> Nuevos confirmados</p>
-                <p ><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i>  {{globalData.NewConfirmed | number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.NewConfirmed"></i>  {{globalData.NewConfirmed | number}}</p>
             </div>
             <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-skull-crossbones"></i> Nuevas muertes</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewDeaths"></i> {{globalData.NewDeaths| number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.NewDeaths"></i> {{globalData.NewDeaths| number}}</p>
             </div>
             <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-users-cog"></i> Recuperados</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.NewRecovered"></i> {{globalData.NewRecovered| number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.NewRecovered"></i> {{globalData.NewRecovered| number}}</p>
             </div>
             <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-list-ul "></i> Total confirmados</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalConfirmed"></i> {{globalData.TotalConfirmed| number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.TotalConfirmed"></i> {{globalData.TotalConfirmed| number}}</p>
             </div>
             <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-user-slash"></i> Muertes totales</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalDeaths"></i> {{globalData.TotalDeaths| number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.TotalDeaths"></i> {{globalData.TotalDeaths| number}}</p>
             </div>
             <div class="container__globa__subcontent inTop">
                 <p><i class="separateIcon fas fa-check"></i> Total de recuperados</p>
-                <p><i class="fas fa-circle-notch" *ngIf="!globalData.TotalRecovered"></i> {{globalData.TotalRecovered| number}}</p>
+                <p class="data"><i class="fas fa-circle-notch" *ngIf="!globalData.TotalRecovered"></i> {{globalData.TotalRecovered| number}}</p>
             </div>
 
         </article>

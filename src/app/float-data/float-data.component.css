@@ -22,14 +22,7 @@
  
   background-color: rgb(1, 1, 99);
 }
-.data{
-  background-color: rgb(1, 1, 99);
-  padding: 0em .5em;
-  border-radius:3px;
-  width: 60px;
-  text-align: center;
-  font-weight: 600;
-}
+
   .container__float *{
     color:white;
   }

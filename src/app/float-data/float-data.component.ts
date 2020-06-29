@@ -10,6 +10,9 @@ export class FloatDataComponent  {
 
   @Input('receivedData') dataCase;
   @ViewChild("allData") alldata;
+  spinner = {
+    off:true
+  }
   public classFloat = {
     black:null,
     hide: true
@@ -17,6 +20,7 @@ export class FloatDataComponent  {
  
 
   ngOnInit(): void {
+      timer(1000).subscribe(()=>this.spinner.off=false)
       if(localStorage.getItem("theme")){ this.classFloat.black =true}
       else {this.classFloat.black = false}
   }

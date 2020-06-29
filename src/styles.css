@@ -10,3 +10,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #eee;
     background-color: rgba(33, 52, 139, 0.984);
   }
+  .spinner{
+    transform: scale(.4);
+  }
+
+.data{
+  background-color: rgb(1, 1, 99);
+  padding: .2em .5em;
+  border-radius:3px;
+  width: 80px;
+  text-align: center;
+  color: #eee;
+  font-weight: 600;
+}

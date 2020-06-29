@@ -2,9 +2,7 @@
     width: 280px;
     margin:.3em .1em;
   }
-.spinner{
-  transform: scale(.4);
-}
+
  .containerExplore{
    display: flex;
    justify-content: center;

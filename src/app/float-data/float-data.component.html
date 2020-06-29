@@ -1,6 +1,7 @@
 
 <div class="container__float" *ngIf="this.classFloat.hide" #allData>
 
+  
     <div class="container__data__float  up" [ngClass]="{'themeActived':classFloat.black ==true,'themeDisabled':classFloat.black ==false}">
   
   
@@ -9,9 +10,12 @@
             <p><span (click)="hide()" matRipple class="fas fa-arrow-down"></span> </p>
       </div>
   
+ 
+        <div class="spinner" style="margin-top: -10px;  display: flex;justify-content: center;" *ngIf="spinner.off">
+            <mat-spinner color="accent"></mat-spinner>
+        </div>
   
-  
-      <article class="container__global__content">
+      <article class="container__global__content" *ngIf="!spinner.off">
   
   
           <div class="container__globa__subcontent inBottoms  ">
